@@ -1,8 +1,24 @@
-import React, {useState} from "react";
+import React, {Component, useState} from "react";
 
-const Counter = () => {
+const Counter =() => {
+
   const [counter, setCounter] = useState(0);
-  const [time]
+  var updatecounter=counter;
+
+  const run = () => {
+    updatecounter++;
+    setCounter(updatecounter);
+  };
+
+  const start = () => {
+    setInterval(run, 1000);
+  };
+
+
+  const stop = () =>{
+    clearInterval();
+  };
+
 
   const handleClickUp = () =>{
     setCounter(counter + 1)
@@ -13,7 +29,7 @@ const Counter = () => {
   } 
 
   const handleClickUpOdd = () =>{
-    if (counter % 2 == 1){
+    if (counter % 2 === 1){
       setCounter(counter +1);
     }
 
@@ -27,20 +43,18 @@ const Counter = () => {
 
   return (
     <div>
-      Counter App: {counter}
+      <h1>Counter App: {counter}</h1>
       <br></br>
       <button onClick={handleClickUp}>Increment</button>
       <button onClick={handleClickDown}>Decrement</button>
       <br></br>
       <button onClick={handleClickUpOdd}>Increment-If-Odd</button>
       <button onClick={handleClickWait}>Async-Inc</button>
-      <br></br>
-      Timer-add-button:
-      <br></br>
-      <button>Start</button>
-      <button>Stop</button>
+      <div className="start_btm">
+        <button onClick={start}>Start</button>
+        <button onClick={stop}>stop</button>
+      </div>
     </div>
-
   )
 }
 
