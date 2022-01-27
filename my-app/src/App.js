@@ -1,5 +1,6 @@
 import AssignOne from './AssignOne';
 import AssignTwo from './AssignTwo';
+import AssignThree from './AssignThree';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="app">
       <AssignOne />
       <AssignTwo />
+      <AssignThree />
     </div>
   );
 }
