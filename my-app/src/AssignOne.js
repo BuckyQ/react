@@ -1,4 +1,5 @@
 import React from 'react';
+import AssignThree from './AssignThree';
 
 class AssignOne extends React.Component{
     constructor(props){
@@ -65,4 +66,6 @@ class AssignOne extends React.Component{
     }
 }
 
-export default AssignOne
+
+const EnhancedAssignOne = AssignThree(AssignOne); 
+export default  EnhancedAssignOne;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ItemList from './ItemList';
 import AddItem from './AddItem';
+import AssignThree from './AssignThree';
 import { FaCentercode } from 'react-icons/fa';
 const AssignTwo = () =>{
     const [items, setItems]=useState([])
@@ -45,5 +46,5 @@ const AssignTwo = () =>{
     );
 
 }
-
-export default AssignTwo
+const EnhancedAssignTwo = AssignThree(AssignTwo); 
+export default  EnhancedAssignTwo;

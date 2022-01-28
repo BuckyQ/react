@@ -1,9 +1,19 @@
-const AssignThree = () => {
-    return (
-        <div>
-            <h1>three</h1>
-        </div>
-    )
+import React from 'react';
+
+
+const AssignThree = (Component, data) =>{
+    return class extends React.Component {
+        constructor(props){
+            super(props);
+            this.state={}
+        }
+
+        render() {
+            return <Component />
+        }
+
+    }
+
 }
 
-export default AssignThree
+export default AssignThree;

@@ -1,14 +1,16 @@
-import AssignOne from './AssignOne';
-import AssignTwo from './AssignTwo';
-import AssignThree from './AssignThree';
+
 import './App.css';
+import AssignThree from './AssignThree';
+import EnhancedAssignOne from './AssignOne';
+import EnhancedAssignTwo from './AssignTwo';
+
+
 
 function App() {
   return (
     <div className="app">
-      <AssignOne />
-      <AssignTwo />
-      <AssignThree />
+      <EnhancedAssignOne />
+      <EnhancedAssignTwo />
     </div>
   );
 }
